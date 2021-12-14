@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Alumnos\CrearAlumnos;
+use App\Http\Livewire\Alumnos\IndexAlumnos;
 use App\Http\Livewire\Login\Login;
 use App\Http\Livewire\Usuarios\BorrarUsuarios;
 use App\Http\Livewire\Usuarios\CrearUsuarios;
@@ -20,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/login',Login::class)->name('login');
 /* Proteger rutas */
-
+/* Rutas protegidas */
 Route::group(['middleware' => 'auth'], function (){
 /*Ruta de usuarios*/
 Route::get('/usuarios',IndexUsuarios::class)->name('index.usuarios');
@@ -28,5 +30,9 @@ Route::get('/usuarios/crear',CrearUsuarios::class)->name('crear.usuarios');
 Route::get('usuarios/{agregar}/mostrar',MostrarUsuarios::class)->name('mostrar.usuarios');
 Route::get('usuarios/{agregar}/editar',EditarUsuarios::class)->name('editar.usuarios');
 Route::get('/usuarios/{agregar}/eliminar', BorrarUsuarios::class)->name('borrar.usuarios');
+
+/*Rutas de alumnos*/
+Route::get('/alumnos',IndexAlumnos::class)->name('index.alumnos');
+Route::get('/alumnos/crear',CrearAlumnos::class)->name('crear.alumnos');
 
 });
