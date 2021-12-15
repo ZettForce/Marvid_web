@@ -20,4 +20,14 @@ class IndexAlumnos extends Component
         ->paginate(10) : [];
         return view('livewire.alumnos.index-alumnos', compact('alumnos'));
     }
+
+    public function cargando()
+    {
+        $this->cargando = true;
+    }
+
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
 }

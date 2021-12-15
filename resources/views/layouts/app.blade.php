@@ -28,12 +28,12 @@
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Alumnos</a>
+                        <a class="nav-link" href="{{route('index.alumnos')}}">Alumnos</a>
                     </li>
                 </ul>
                 <div class="mx-auto d-block">
                     <img style="border-radius: 160px;width:30px;height:30px;"
-                        src="{{ storage::disk('public')->url(Auth::user()->foto ? Auth::user()->foto : 'images/usuarios/default.png') }}"
+                        src="{{Storage::disk('public')->url(Auth::user()->foto ? Auth::user()->foto : 'images/usuarios/default.png') }}"
                         alt="">
                     <a class="navbar-brand">{{ Auth::user()->username }} </a> 
                 </div>
