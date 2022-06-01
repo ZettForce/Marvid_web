@@ -1,5 +1,5 @@
 <div>
-    <form>
+    <form class="bg-img" >
         <div class="form-row">
           <div class="form-group col-md-4">
             <label >Nombres</label>

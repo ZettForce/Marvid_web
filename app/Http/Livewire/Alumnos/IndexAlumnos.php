@@ -14,6 +14,7 @@ class IndexAlumnos extends Component
     public $cargando = false;
     public function render()
     {
+        $alumnos = Alumno::orderBy('apellidoPaterno','desc');
         $alumnos = ($this->cargando == true) ? Alumno::where('nombre', 'LIKE', '%' .$this->search .'%')
         ->orwhere ('apellidoPaterno', 'LIKE', '%' .$this->search .'%')
         ->orwhere ('apellidoMaterno', 'LIKE', '%' .$this->search .'%')

@@ -1,3 +1,11 @@
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,13 +43,13 @@
                     <img style="border-radius: 160px;width:30px;height:30px;"
                         src="{{Storage::disk('public')->url(Auth::user()->foto ? Auth::user()->foto : 'images/usuarios/default.png') }}"
                         alt="">
-                    <a class="navbar-brand">{{ Auth::user()->username }} </a> 
+                    <a class="navbar-brand">{{ Auth::user()->username }} </a>
                 </div>
                 <div style="margin-left:500px;" >
                     @livewire('login.logout')
                 </div>
             @endif
-            
+
         </div>
     </nav>
 
@@ -82,3 +90,13 @@
 </body>
 
 </html>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+

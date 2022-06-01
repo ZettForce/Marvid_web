@@ -27,7 +27,7 @@ Route::get('/login',Login::class)->name('login');
 /* Proteger rutas */
 
 /* Rutas protegidas */
-Route::group(['middleware' => 'auth'], function (){
+ Route::group(['middleware' => 'auth'], function (){
 /*Ruta de usuarios*/
 Route::get('/usuarios',IndexUsuarios::class)->name('index.usuarios');
 Route::get('/usuarios/crear',CrearUsuarios::class)->name('crear.usuarios');
@@ -41,4 +41,8 @@ Route::get('/alumnos/crear',CrearAlumnos::class)->name('crear.alumnos');
 Route::get('/alumnos/{alumno}/eliminar',BorrarAlumnos::class)->name('borrar.alumnos');
 Route::get('alumnos/{alumno}/mostrar', MostrarAlumnos::class)->name('mostrar.alumnos');
 Route::get('alumnos/{alumno}/editar',EditarAlumnos::class)->name('editar.alumnos');
-});
+ });
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
