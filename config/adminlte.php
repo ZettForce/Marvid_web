@@ -251,14 +251,19 @@ return [
             'url'         => '/usuarios',
             'icon'        => 'far fa-fw fa-file',
         ],
-        ['header' => 'Administración'],
+        ['header' => 'ADMINISTRACIÓN'],
         [
-            'text' => 'profile',
+            'text' => 'Alumnos',
             'url'  => '/usuarios/crear',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Maestros',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Usuarios',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
