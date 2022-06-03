@@ -254,7 +254,7 @@ return [
         ['header' => 'ADMINISTRACIÓN'],
         [
             'text' => 'Alumnos',
-            'url'  => '/usuarios/crear',
+            'url'  => '/alumnos/crear',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

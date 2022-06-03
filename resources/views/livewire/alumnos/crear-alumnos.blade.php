@@ -3,7 +3,7 @@
     <form wire:submit.prevent="crear" wire:click="$emit('saved')">
         <div class="card">
             <div class="card-header" style="text-align: center;color:white;background-color:#800000" >
-                Nuevo Alumno
+                Datos del Alumno
             </div>
             <div class="card-body">
                 @include('livewire.alumnos.formulario')
