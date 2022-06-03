@@ -4,7 +4,7 @@
     <a type="button" href="{{ route('crear.alumnos') }}" class="float-right mb-3 btn btn-success">Agregar <i
             class="fa fa-plus" aria-hidden="true"></i></a>
 
-    <div class="mb-2 col-3">
+    <div class="mb-2 col-6">
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search"></i></span>
             <input wire:model="search" class="form-control" placeholder="Buscar..." type="search" aria-l
@@ -19,7 +19,7 @@
             <thead>
                 <tr>
                     <th>Matricula</th>
-                    <th colspan="3" style="text-align:center">Nombre del alumno</th>
+                    <th colspan="1" style="text-align:center">Nombre del alumno</th>
                     <th>Domicilio</th>
                     <th>Colonia</th>
                     <th>Acciones</th>
@@ -29,9 +29,12 @@
                 @foreach ($alumnos as $alumno)
                     <tr>
                         <td> {{ $alumno->matricula }}</td>
-                        <td> {{ $alumno->nombre }}</td>
-                        <td> {{ $alumno->apellidoPaterno }}</td>
-                        <td> {{ $alumno->apellidoMaterno }}</td>
+                        <td>
+                         {{ $alumno->nombre }}
+                         {{ $alumno->nombre2 }}
+                         {{ $alumno->apellidoPaterno }}
+                         {{ $alumno->apellidoMaterno }}
+                        </td>
                         <td> {{ $alumno->domicilio }}</td>
                         <td> {{ $alumno->colonia }}</td>
 

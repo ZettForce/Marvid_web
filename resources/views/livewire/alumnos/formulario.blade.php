@@ -8,7 +8,7 @@
           </div>
           <div class="form-group col-md-3">
             <label >Segundo Nombre</label>
-            <input wire:model.defer="alumno.nombre" type="text" class="form-control"  placeholder="Antonio">
+            <input wire:model.defer="alumno.nombre2" type="text" class="form-control"  placeholder="Antonio">
             @error('alumno.nombre2') <span class="text-danger">{{ $message }}</span> @enderror
           </div>
           <div class="form-group col-md-3">

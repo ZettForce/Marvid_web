@@ -254,8 +254,20 @@ return [
         ['header' => 'ADMINISTRACIÓN'],
         [
             'text' => 'Alumnos',
-            'url'  => '/alumnos/crear',
+            'url'  => '/alumnos',
             'icon' => 'fas fa-fw fa-user',
+            'submenu'=> [
+                [
+                    'text' => 'Crear',
+                    'icon' => 'fas fa-fw fa-house',
+                    'url' => '/alumnos/crear'
+                ],
+                [
+                    'text' => 'Editar',
+                    'icon' => 'fas fa-fw fa-pen',
+                    'url' => '/alumnos/editar'
+                ]
+            ]
         ],
         [
             'text' => 'Maestros',

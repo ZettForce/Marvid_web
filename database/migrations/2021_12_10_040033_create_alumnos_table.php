@@ -17,7 +17,7 @@ class CreateAlumnosTable extends Migration
             $table->id();
             $table->string('matricula')->nullable();
             $table->string('nombre');
-            $table->string('nombre2');
+            $table->string('nombre2')->nullable();
             $table->string('apellidoPaterno');
             $table->string('apellidoMaterno')->nullable();
             $table->string('domicilio');
